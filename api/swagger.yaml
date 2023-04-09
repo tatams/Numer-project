@@ -1,0 +1,20 @@
+swagger: '2.0'
+info:
+  title: Example API
+  version: 1.0.0
+securityDefinitions:
+  api_key:
+    type: apiKey
+    name: X-API-Key
+    in: header
+security:
+  - api_key: []
+paths:
+  /example:
+    get:
+      summary: Example endpoint
+      security:
+        - api_key: []
+      responses:
+        '200':
+          description: Example response

@@ -1,0 +1,96 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap'); */
+
+* { /*reset browser*/
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+  font-family: 'Prompt', sans-serif;
+}
+
+body {
+    background: #BEF0CB;
+    opacity: 80%;
+}
+
+nav {
+    height: 10vh;
+    width: 100%;
+    background: #609966;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav h2 {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    border: 2px solid white;
+    padding: 5px 10px;
+}
+
+li{
+    padding: 0;
+    margin: 0;
+}
+ul {
+    list-style: none;
+}
+
+ul.menu {
+    display: flex;
+}
+
+.nav-title{
+    color: #EDF1D6 !important;
+}
+
+ul.menu li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+    padding: 0 30px;
+    transition: 1s;
+    position: relative;
+}
+
+ul.menu li a {
+    color: #609966;
+    text-decoration: none;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; 
+}
+
+ul.menu li:hover {
+    background: #222;
+}
+
+ul.menu li ul.menu-sub {
+    position: absolute;
+    top: 60px;
+    background: #222;
+    display: none;
+}
+
+ul.menu li ul.menu-sub li {
+    width: 100%;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+}
+
+ul.menu li:hover ul.menu-sub {
+    display: block;
+    background: whitesmoke;
+}
+
+ul.menu li:hover ul.menu-sub :hover {
+    background: #bdd6b2;
+}
+
+
+a:hover {
+    color: #000000 !important;
+    transition: 01s color;
+}
