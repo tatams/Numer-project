@@ -14,7 +14,7 @@ const swaggerFile = require('./swagger_output.json')
 
 const port = process.env.PORT || 5000;
 
-const uri = `mongodb://tatams:%20@host.docker.internal/Numer`;
+const uri = `mongodb+srv://tatams:1234@cluster0.6mlnnkl.mongodb.net/Numer`;
 
 async function connect(){
     try{
