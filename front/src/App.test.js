@@ -1,5 +1,6 @@
 import { Calbisection } from "../calculatetest/bisectioncal";
 import { Calonepoint } from "../calculatetest/onepointcal";
+
 const bisection_datatest = {
     fx: '(x^4)-13',
     xl:-1,
