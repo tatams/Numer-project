@@ -3,6 +3,7 @@ import { Button, Container, Form, Table } from "react-bootstrap";
 import { evaluate } from "mathjs";
 import Swal from "sweetalert2";
 import axios from "axios";
+// import axios from 'axios-esm';
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -266,6 +267,7 @@ const Bisection = () => {
           <input
             type="text"
             id="equation"
+            data-testid="fx"
             value={Equation}
             onChange={inputEquation}
             style={{ width: "20%", margin: "0 auto" }}
@@ -278,6 +280,7 @@ const Bisection = () => {
           <input
             type="number"
             id="XL"
+            data-testid="xl"
             value={XL}
             onChange={inputXL}
             style={{ width: "20%", margin: "0 auto" }}
@@ -291,6 +294,7 @@ const Bisection = () => {
           <input
             type="number"
             id="XR"
+            data-testid="xr"
             value={XR}
             onChange={inputXR}
             style={{ width: "20%", margin: "0 auto" }}
@@ -309,7 +313,7 @@ const Bisection = () => {
             setXR(res.data.xr)
           })
         }} className="button-random">Random</Button> */}
-        <Button onClick={calculateRoot} className="button-calculate">Calculate</Button>
+        <Button onClick={calculateRoot} className="button-calculate"  data-testid="Calculate">Calculate</Button>
         </div>
         <select name="random" id="eq" onChange={click_random}>
         <option value="select">select Equation</option>
