@@ -20,11 +20,19 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: 18
-    - name: install module
+    - name: install api module
       run: |
         cd api
         npm i
     - name: api test
       run: |
         cd api
+        npm test
+    - name: install front module
+      run: |
+        cd front
+        npm i
+    - name: front-end test
+      run: |
+        cd front
         npm test
