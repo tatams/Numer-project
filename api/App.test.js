@@ -2,7 +2,8 @@ const request = require('supertest');
 const app = require('./index');
 
 describe('API-random path', ()=>{
-    it('Bisection should return database in mongodb', async ()=>{
+
+  it('Bisection should return database in mongodb', async ()=>{
         const t = await request(app).post('/token')
         console.log(t._body.token);
         // console.log(t.data.token);
@@ -24,6 +25,7 @@ describe('API-random path', ()=>{
             expect(res.body).toHaveProperty('xl', -1);
             expect(res.body).toHaveProperty('xr', 2);
     })
+
     it('OnePoint should return database in mongodb', async ()=>{
         const t = await request(app).post('/token')
         console.log(t._body.token);

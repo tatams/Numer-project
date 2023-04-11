@@ -215,22 +215,25 @@ const Caltaylor = (x,x0,n) => {
           <div>
           <div className="form-all-i">
             <div className="form-i">
-          <Form.Label>Input f(x)</Form.Label>
+          <Form.Label htmlFor="equation">Input f(x)</Form.Label>
           <input
             type="text"
             id="equation"
+            data-testid="fx"
             value={Equation}
             onChange={inputEquation}
             style={{ width: "20%", margin: "0 auto" }}
             className="form-control"
             width=""
+            defaultValue={Equation}
           ></input>
             </div>
             <div className="form-i">
-          <Form.Label>Input x</Form.Label>
+          <Form.Label htmlFor="X1">Input x</Form.Label>
           <input
             type="number"
             id="X1"
+            data-testid="X1"
             onChange={inputX}
             style={{ width: "20%", margin: "0 auto" }}
             className="form-control"
@@ -239,10 +242,11 @@ const Caltaylor = (x,x0,n) => {
           ></input>
           </div>
           <div className="form-i">
-          <Form.Label>Input x0</Form.Label>
+          <Form.Label htmlFor="X0">Input x0</Form.Label>
           <input
             type="number"
-            id="X2"
+            id="X0"
+            data-testid="X0"
             onChange={inputX0}
             style={{ width: "20%", margin: "0 auto" }}
             className="form-control"
@@ -251,10 +255,11 @@ const Caltaylor = (x,x0,n) => {
           ></input>
           </div>
           <div className="form-i">
-          <Form.Label>Input n</Form.Label>
+          <Form.Label htmlFor="N">Input n</Form.Label>
           <input
             type="number"
-            id="X2"
+            id="N"
+            data-testid="N"
             onChange={inputN}
             style={{ width: "20%", margin: "0 auto" }}
             className="form-control"
@@ -266,7 +271,7 @@ const Caltaylor = (x,x0,n) => {
           </div>
         </Form.Group>
         <Button onClick={''} className="button-random">Random</Button>
-        <Button onClick={calculateRoot} className="button-calculate">Calculate</Button>
+        <Button onClick={calculateRoot} className="button-calculate" data-testid="cal">Calculate</Button>
       </Form>
       <div>
       {showGraph == true && 
@@ -283,7 +288,7 @@ const Caltaylor = (x,x0,n) => {
               <center><h3>Answer</h3></center><br></br>
                 Iteration : {valueIter[valueIter.length-1]}<br></br>
                 {/* Error : {valueE[valueE.length-1]}<br></br><br></br> */}
-                Answer : {ValueANS[ValueANS.length-1]}<br></br><br></br>
+                <div data-testid="ans">Answer : {ValueANS[ValueANS.length-1]}</div><br></br><br></br>
                 {/* Answer = {X.toPrecision(7)}<br></br> */}
 
             </div>
